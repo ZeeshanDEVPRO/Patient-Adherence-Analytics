@@ -1,4 +1,6 @@
 🧠 Predicting Patient Medication Adherence — ML & Power BI Project
+
+
 This end-to-end healthcare analytics project predicts which patients are at risk of not adhering to their prescribed medication regimen. It integrates machine learning modeling in Python with a multi-tab Power BI dashboard for clinical and operational decision support — ideal for roles like Business Analyst at ProcDNA Analytics.
 
 📂 Dataset Overview
