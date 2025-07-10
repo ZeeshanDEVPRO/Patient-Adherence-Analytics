@@ -1,10 +1,13 @@
 🧠 Predicting Patient Medication Adherence — ML & Power BI Project
 
 
+
 This end-to-end healthcare analytics project predicts which patients are at risk of not adhering to their prescribed medication regimen. It integrates machine learning modeling in Python with a multi-tab Power BI dashboard for clinical and operational decision support — ideal for roles like Business Analyst at ProcDNA Analytics.
 
 📂 Dataset Overview
 The project uses a synthesized dataset simulating patient adherence behavior, with the following features:
+
+
 
 Feature	Description
 Age	Patient's age in years
@@ -21,6 +24,8 @@ Mental_Health_Status	Ordinal (Poor, Fair, Good)
 Insurance_Coverage	Binary (0 = No, 1 = Yes)
 Medication_Type_*	One-hot encoded columns for TypeA, B, C
 Adherence	Binary Target (0 = Non-adherent, 1 = Adherent)
+
+
 
 🔧 Project Workflow
 1. 🧹 Data Cleaning & Encoding
@@ -53,8 +58,11 @@ Final predictions file: adherence_predictions_for_powerbi.csv
 
 Contains actual + predicted adherence, probabilities, and risk flags
 
+
+
 📊 Power BI Dashboard Design
 A professional, interactive Power BI report with 4 thematic tabs:
+
 
 🟦 Tab 1: Overview Dashboard
 KPI cards: Adherence rate, High-risk %
@@ -63,6 +71,7 @@ Clustered bar: Adherence by Medication Type
 
 Slicers for Gender, Insurance, Risk group
 
+
 🟩 Tab 2: Patient Analysis
 Boxplots for Dosage vs. Adherence
 
@@ -70,12 +79,14 @@ Age and Income distributions
 
 Demographics vs. Risk segmentation
 
+
 🟥 Tab 3: Risk Analysis
 Heatmap: Condition Severity × Social Support
 
 Donut chart: Risk status distribution
 
 High-risk cohort deep dive
+
 
 🟨 Tab 4: Actionable Insights
 Matrix: Suggested interventions (via DAX)
@@ -90,21 +101,9 @@ DAX logic to recommend:
 
 📌 Insurance desk referral
 
-📌 DAX Highlights
-DAX
-Copy
-Edit
-Suggested_Action = 
-SWITCH(TRUE(),
-    adherence_predictions[Is_High_Risk] = "Yes" &&
-    adherence_predictions[Mental_Health_Status] = 0 &&
-    adherence_predictions[Healthcare_Access] = 0, "Care Coordinator + Weekly Check-in",
-    adherence_predictions[Is_High_Risk] = "Yes" &&
-    adherence_predictions[Insurance_Coverage] = 0, "Insurance Helpdesk Referral",
-    adherence_predictions[Is_High_Risk] = "Yes" &&
-    adherence_predictions[Social_Support_Level] = 0, "Assign Community Volunteer",
-    "Routine Monitoring"
-)
+
+
+
 🧠 Skills Demonstrated
 Data wrangling, feature engineering (Python, Pandas)
 
@@ -116,6 +115,8 @@ Storytelling with interactive Power BI dashboards
 
 Business insight generation for healthcare interventions
 
+
+
 📁 How to Use
 Clone/download the repo
 
@@ -125,6 +126,8 @@ Open medication_adherence_dashboard.pbix in Power BI Desktop
 
 Use slicers and bookmarks to navigate insights
 
+
+
 📈 Potential Use Cases
 Pharmaceutical compliance improvement
 
@@ -133,6 +136,8 @@ Hospital patient monitoring
 Insurance risk stratification
 
 Targeted intervention planning by NGOs or care coordinators
+
+
 
 👨‍💻 Author
 Zeeshan Sayeed
